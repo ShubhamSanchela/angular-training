@@ -1,0 +1,50 @@
+<div style="text-align: center; margin-bottom: 30px;">
+    <h1>Calling Multiple Apis in Single Function</h1>
+</div>
+
+<div>
+    <h3 style="text-align: center;">Calling Custom Api</h3>
+    <br>
+        <table class="table table-striped">
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroes | paginate: { itemsPerPage: 10, currentPage: p }">
+                    <td>{{hero.id}}</td>
+                    <td>{{hero.title}}</td>
+                    <td>{{hero.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    <pagination-controls style="text-align: center;" (pageChange)="p = $event" ></pagination-controls>
+</div>
+<br><br><br>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<br><br><br>
+<div>
+    <h3 style="text-align: center;">Calling Photos Api</h3>
+    <br>
+    <div style="text-align: left;">
+        <table class="table table-striped">
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Url</th>
+                <th>Thumbnail Url</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let photo of photos  | paginate: { itemsPerPage: 10, currentPage: q }">
+                    <td>{{photo.id}}</td>
+                    <td>{{photo.title}}</td>
+                    <td>{{photo.url}}</td>
+                    <td>{{photo.thumbnailUrl}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        
+    <pagination-controls style="text-align: center;" (pageChange)="q = $event"></pagination-controls>
+</div>

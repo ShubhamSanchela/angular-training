@@ -1,0 +1,30 @@
+<!-- 
+    This component is for data saving in db.json object using POSTMAN
+    url = "https://www.youtube.com/watch?v=rhDQeCstlbI&list=PL8p2I9GklV45JZerGMvw5JVxPSxCg8VPv&index=61"
+ -->
+
+<h1>Angular Register New User</h1>
+<h1> Command for running json  server</h1>
+<p><b>json-server --watch db.json </b></p>
+
+
+
+<div class="col-sm-6">
+    <form [formGroup]="register" (ngSubmit)="collections()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="email" class="form-control" formControlName="name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+        <label>E-mail</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+    </div>
+    <br>
+    <button  type="submit"  class="btn btn-primary">Submit</button>
+</form>
+</div>
+

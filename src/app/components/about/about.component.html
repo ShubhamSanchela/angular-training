@@ -1,0 +1,31 @@
+<h1 class="text-center">{{pageTitle}}</h1>
+
+<table class="table table-bordered">
+    <tr class="bg-dark text-white" >
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+    </tr>
+    <tr *ngFor="let user of userss">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.city}}</td>
+    </tr>
+</table>
+
+<!-- Bottom table -->
+
+<!-- <div class="bottom-table">
+    <h1 style="margin-left: 35%;">Getting Users List</h1>
+
+    <input style="margin-left: 37%;" type="text" (change)="setNewUserName($event.target.value)" [value]="newUserName">
+    
+    <button (click)="addUser()">Add User</button>
+    
+    <div *ngFor="let user of users" class="user-container">
+    <span>{{user.name}} is {{user.age}} years age old.</span>
+    <b><span class="remove-btn" (click)="removeUser(user.id)">Remove</span></b>
+    </div>
+</div> -->
+
+ 
